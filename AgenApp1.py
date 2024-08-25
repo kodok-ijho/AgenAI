@@ -20,25 +20,28 @@ if not os.path.exists(UPLOAD_FOLDER):
 if not os.path.exists(RESULT_FOLDER):
     os.makedirs(RESULT_FOLDER)
 
-# Extract text from a PDF file
-def extract_text_from_pdf(file):
-    reader = PdfReader(file)
-    text = ''
-    for page in reader.pages:
-        text += page.extract_text()
-    return text
+def extract_customer_name(input_file):
+    with open(input_file, "rb") as f:
+        reader = PdfReader(f)
+        text = ''
+        for page in reader.pages:
+            text += page.extract_text()
 
-# Extract customer name using OpenAI's GPT
-def extract_customer_name(text):
+    # Use the 'completions' endpoint with a specific prompt
+    prompt = f"What is the customer name in the following text:\n\n{text}"
     response = openai.chat.completions.create(
-        
-        messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": f"Extract the customer's name from the following text:\n\n{text}"}
-        ],
         model="gpt-3.5-turbo",
-    )
-    return response['choices'][0]['message']['content'].strip()
+         messages=[
+             {"role": "system", "content": "You are a helpful assistant."},
+             {"role": "user", "content": prompt}
+         ]
+     )
+    
+
+    # Extract the customer name from the first completion
+    customer_name = response.choices[0].message.content.strip()
+
+    return customer_name
 
 # Streamlit App
 st.title("PDF Customer Name Extractor")
@@ -51,21 +54,20 @@ if uploaded_file is not None:
         upload_path = os.path.join(UPLOAD_FOLDER, uploaded_file.name)
         with open(upload_path, "wb") as f:
             f.write(uploaded_file.getbuffer())
-        
+
         # Extract text and get customer name
-        text = extract_text_from_pdf(upload_path)
-        customer_name = extract_customer_name(text)
-        
+        customer_name = extract_customer_name(upload_path)
+
         # Format today's date
         today_date = datetime.today().strftime('%Y-%m-%d')
-        
+
         # New file name
         new_filename = f"{customer_name} - {today_date}.pdf"
         result_path = os.path.join(RESULT_FOLDER, new_filename)
-        
-        # Move and rename the file
-        shutil.move(upload_path, result_path)
-        
+
+        # Move and rename the file (optional, remove if not needed)
+        # shutil.move(upload_path, result_path)
+
         st.success(f"File saved successfully as {new_filename} in Result folder.")
         st.write("Customer Name:", customer_name)
 else:
