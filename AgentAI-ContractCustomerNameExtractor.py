@@ -36,8 +36,8 @@ def extract_customer_name(input_file):
 
     try:
         response = openai.chat.completions.create(
-            #model="gpt-3.5-turbo",
-            model="gpt-4o",
+            model="gpt-3.5-turbo",
+            #model="gpt-4o",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt}
@@ -81,17 +81,21 @@ if uploaded_file is not None:
         # Format today's date
         today_date = datetime.today().strftime('%Y-%m-%d')
 
-        # Remove invalid characters
-        customer_name = re.sub(r'[<>:"/\\|?*]', '', customer_name)
+        # After extracting the customer name, sanitize it before using it as a file name
+        if customer_name:
+            # Remove invalid characters for filenames (including newline characters, tabs, etc.)
+            customer_name = re.sub(r'[<>:"/\\|?*\n\r\t]', '', customer_name)
 
-        # New file name
-        new_filename = f"{customer_name} - {today_date}.pdf"
-        result_path = os.path.join(RESULT_FOLDER, new_filename)
+            # New file name after formatting the date and ensuring it's clean
+            new_filename = f"{customer_name.strip()} - {today_date}.pdf"
+            result_path = os.path.join(RESULT_FOLDER, new_filename)
 
-        # Move and rename the file (optional, remove if not needed)
-        shutil.move(upload_path, result_path)
+            # Move and rename the file
+            shutil.move(upload_path, result_path)
 
-        st.success(f"File saved successfully as {new_filename} in Result folder.")
-        st.write("Customer Name:", customer_name)
+            st.success(f"File saved successfully as {new_filename} in Result folder.")
+            st.write("Customer Name:", customer_name)
+        else:
+            st.error("Failed to extract a valid customer name from the PDF.")
 else:
     st.warning("Please upload a PDF file to process.")
