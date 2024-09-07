@@ -1,0 +1,2383 @@
+2024-08-27 10:31:50 [INFO] Question: what is this report about?
+2024-08-27 10:31:50 [INFO] Running PandasAI with openai LLM...
+2024-08-27 10:31:50 [INFO] Prompt ID: 97cea2f0-8965-4cc1-be0b-0f655452f8d8
+2024-08-27 10:31:50 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-27 10:31:50 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-27 10:31:50 [INFO] Executing Step 1: CacheLookup
+2024-08-27 10:31:50 [INFO] Executing Step 2: PromptGeneration
+2024-08-27 10:31:50 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-03-2019,708491,,,,551390.0,56.66,AA,BJ,BI,0.61926,3.1937,3.194
+01-01-2019,818991,R1,E2M,27,,,S,V,BV,0.67048,3.15028,10.92
+01-02-2019,354325,R2,K1X,45,524423.0,0.63,X,Q,CE,38.99385,28.04567,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ what is this report about?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-27 10:31:50 [INFO] Executing Step 3: CodeGenerator
+2024-08-27 10:31:55 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 10:31:55 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-03-2019,708491,,,,551390.0,56.66,AA,BJ,BI,0.61926,3.1937,3.194
+01-01-2019,818991,R1,E2M,27,,,S,V,BV,0.67048,3.15028,10.92
+01-02-2019,354325,R2,K1X,45,524423.0,0.63,X,Q,CE,38.99385,28.04567,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ what is this report about?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-27 10:31:55 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+dfs = [
+    pd.DataFrame({
+        "Periode": ["01-03-2019", "01-01-2019", "01-02-2019"],
+        "IDE": [708491, 818991, 354325],
+        "PGGROUP": ["", "R1", "R2"],
+        "PGW": ["", "E2M", "K1X"],
+        "Dv": [None, 27, 45],
+        "IDC": [551390.0, None, 524423.0],
+        "IndexC": [56.66, None, 0.63],
+        "TypeCM": ["AA", "S", "X"],
+        "FN": ["BJ", "V", "Q"],
+        "FG": ["BI", "BV", "CE"],
+        "IndexCC": [0.61926, 0.67048, 38.99385],
+        "IndexCP": [3.1937, 3.15028, 28.04567],
+        "IndexMP": [3.194, 10.92, None]
+    })
+]
+
+# Declare result var: 
+result = {"type": "string", "value": "This report includes data on various attributes like Periode, IDE, PGGROUP, PGW, Dv, IDC, IndexC, TypeCM, FN, FG, IndexCC, IndexCP, IndexMP for different time periods."}
+            ```
+            
+2024-08-27 10:31:55 [INFO] Executing Step 4: CachePopulation
+2024-08-27 10:31:55 [INFO] Executing Step 5: CodeCleaning
+2024-08-27 10:31:55 [INFO] 
+Code running:
+```
+result = {'type': 'string', 'value': 'This report includes data on various attributes like Periode, IDE, PGGROUP, PGW, Dv, IDC, IndexC, TypeCM, FN, FG, IndexCC, IndexCP, IndexMP for different time periods.'}
+        ```
+2024-08-27 10:31:55 [INFO] Executing Step 6: CodeExecution
+2024-08-27 10:31:55 [INFO] Executing Step 7: ResultValidation
+2024-08-27 10:31:55 [INFO] Answer: {'type': 'string', 'value': 'This report includes data on various attributes like Periode, IDE, PGGROUP, PGW, Dv, IDC, IndexC, TypeCM, FN, FG, IndexCC, IndexCP, IndexMP for different time periods.'}
+2024-08-27 10:31:55 [INFO] Executing Step 8: ResultParsing
+2024-08-27 11:13:52 [INFO] Question: create me plot of IndexCP by FG on Dv 72
+2024-08-27 11:13:52 [INFO] Running PandasAI with openai LLM...
+2024-08-27 11:13:52 [INFO] Prompt ID: b3061b68-1105-4017-9fbd-9940daef5831
+2024-08-27 11:13:52 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-27 11:13:53 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-27 11:13:53 [INFO] Executing Step 1: CacheLookup
+2024-08-27 11:13:53 [INFO] Executing Step 2: PromptGeneration
+2024-08-27 11:13:53 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,668269,B1,,12,618022.0,1.47,S,BF,CI,3.88874,35.7365,10.619
+01-02-2019,484584,P2,R1Q,,,,AA,BY,Y,1.57083,0.36313,7.604
+01-03-2019,713024,,Q1L,32,567362.0,0.75,R,CA,AF,2.32606,2.09806,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ create me plot of IndexCP by FG on Dv 72
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-27 11:13:53 [INFO] Executing Step 3: CodeGenerator
+2024-08-27 11:13:55 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:13:55 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,668269,B1,,12,618022.0,1.47,S,BF,CI,3.88874,35.7365,10.619
+01-02-2019,484584,P2,R1Q,,,,AA,BY,Y,1.57083,0.36313,7.604
+01-03-2019,713024,,Q1L,32,567362.0,0.75,R,CA,AF,2.32606,2.09806,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ create me plot of IndexCP by FG on Dv 72
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-27 11:13:55 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs contains all the dataframes
+
+# Concatenate all dataframes in dfs list
+df = pd.concat(dfs)
+
+# Filter rows where Dv is 72
+df_filtered = df[df['Dv'] == 72]
+
+# Group by FG and create a plot of IndexCP
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+
+plt.xlabel('IndexCP')
+plt.ylabel('FG')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+
+# Saving the plot as a PNG file
+plt.savefig('indexcp_by_fg.png')
+
+# Declare result variable as a dictionary
+result = {"type": "plot", "value": "indexcp_by_fg.png"}
+            ```
+            
+2024-08-27 11:13:55 [INFO] Executing Step 4: CachePopulation
+2024-08-27 11:13:55 [INFO] Executing Step 5: CodeCleaning
+2024-08-27 11:13:55 [INFO] Saving charts to D:\Kerja\Generative AI\AgenAI\AgenAI\exports\charts\temp_chart.png
+2024-08-27 11:13:55 [INFO] 
+Code running:
+```
+df = pd.concat(dfs)
+df_filtered = df[df['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('FG')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png'}
+        ```
+2024-08-27 11:13:55 [INFO] Executing Step 6: CodeExecution
+2024-08-27 11:13:55 [WARNING] No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-08-27 11:13:56 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2024-08-27 11:13:56 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-08-27 11:13:56 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-27 11:13:56 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-27 11:13:56 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,668269,B1,,12,618022.0,1.47,S,BF,CI,3.88874,35.7365,10.619
+01-02-2019,484584,P2,R1Q,,,,AA,BY,Y,1.57083,0.36313,7.604
+01-03-2019,713024,,Q1L,32,567362.0,0.75,R,CA,AF,2.32606,2.09806,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCP by FG on Dv 72
+
+You generated this python code:
+df = pd.concat(dfs)
+df_filtered = df[df['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('FG')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2024-08-27 11:13:56 [INFO] Executing Step 1: CodeGenerator
+2024-08-27 11:13:58 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:13:58 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,668269,B1,,12,618022.0,1.47,S,BF,CI,3.88874,35.7365,10.619
+01-02-2019,484584,P2,R1Q,,,,AA,BY,Y,1.57083,0.36313,7.604
+01-03-2019,713024,,Q1L,32,567362.0,0.75,R,CA,AF,2.32606,2.09806,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCP by FG on Dv 72
+
+You generated this python code:
+df = pd.concat(dfs)
+df_filtered = df[df['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('FG')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-27 11:13:58 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.concat(dfs)
+df_filtered = df[df['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('IndexCP')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+            ```
+            
+2024-08-27 11:13:58 [INFO] Executing Step 2: CodeCleaning
+2024-08-27 11:13:58 [INFO] 
+Code running:
+```
+df = pd.concat(dfs)
+df_filtered = df[df['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('IndexCP')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+        ```
+2024-08-27 11:13:58 [WARNING] No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-08-27 11:13:58 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-08-27 11:13:58 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2024-08-27 11:13:58 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-27 11:13:58 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-27 11:13:58 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,668269,B1,,12,618022.0,1.47,S,BF,CI,3.88874,35.7365,10.619
+01-02-2019,484584,P2,R1Q,,,,AA,BY,Y,1.57083,0.36313,7.604
+01-03-2019,713024,,Q1L,32,567362.0,0.75,R,CA,AF,2.32606,2.09806,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCP by FG on Dv 72
+
+You generated this python code:
+df = pd.concat(dfs)
+df_filtered = df[df['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('IndexCP')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2024-08-27 11:13:58 [INFO] Executing Step 1: CodeGenerator
+2024-08-27 11:14:03 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:14:03 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,668269,B1,,12,618022.0,1.47,S,BF,CI,3.88874,35.7365,10.619
+01-02-2019,484584,P2,R1Q,,,,AA,BY,Y,1.57083,0.36313,7.604
+01-03-2019,713024,,Q1L,32,567362.0,0.75,R,CA,AF,2.32606,2.09806,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCP by FG on Dv 72
+
+You generated this python code:
+df = pd.concat(dfs)
+df_filtered = df[df['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('IndexCP')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-27 11:14:03 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    'Periode': ['01-01-2019', '01-02-2019', '01-03-2019'],
+    'IDE': [668269, 484584, 713024],
+    'PGGROUP': ['B1', 'P2', ''],
+    'PGW': ['', 'R1Q', 'Q1L'],
+    'Dv': [12, None, 32],
+    'IDC': [618022.0, None, 567362.0],
+    'IndexC': [1.47, 1.57083, 0.75],
+    'TypeCM': ['S', '', 'R'],
+    'FN': ['BF', 'AA', 'CA'],
+    'FG': ['CI', 'Y', 'AF'],
+    'IndexCC': [3.88874, 1.57083, 2.32606],
+    'IndexCP': [35.7365, 0.36313, 2.09806],
+    'IndexMP': [10.619, 7.604, None]
+}
+
+df = pd.DataFrame(data)
+
+df_filtered = df[df['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('IndexCP')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+            ```
+            
+2024-08-27 11:14:03 [INFO] Executing Step 2: CodeCleaning
+2024-08-27 11:14:03 [INFO] 
+Code running:
+```
+data = {'Periode': ['01-01-2019', '01-02-2019', '01-03-2019'], 'IDE': [668269, 484584, 713024], 'PGGROUP': ['B1', 'P2', ''], 'PGW': ['', 'R1Q', 'Q1L'], 'Dv': [12, None, 32], 'IDC': [618022.0, None, 567362.0], 'IndexC': [1.47, 1.57083, 0.75], 'TypeCM': ['S', '', 'R'], 'FN': ['BF', 'AA', 'CA'], 'FG': ['CI', 'Y', 'AF'], 'IndexCC': [3.88874, 1.57083, 2.32606], 'IndexCP': [35.7365, 0.36313, 2.09806], 'IndexMP': [10.619, 7.604, None]}
+df = dfs[0]
+df_filtered = df[df['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('IndexCP')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+        ```
+2024-08-27 11:14:03 [WARNING] No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-08-27 11:14:03 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-08-27 11:14:03 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2024-08-27 11:14:03 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-27 11:14:03 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-27 11:14:03 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,668269,B1,,12,618022.0,1.47,S,BF,CI,3.88874,35.7365,10.619
+01-02-2019,484584,P2,R1Q,,,,AA,BY,Y,1.57083,0.36313,7.604
+01-03-2019,713024,,Q1L,32,567362.0,0.75,R,CA,AF,2.32606,2.09806,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCP by FG on Dv 72
+
+You generated this python code:
+data = {'Periode': ['01-01-2019', '01-02-2019', '01-03-2019'], 'IDE': [668269, 484584, 713024], 'PGGROUP': ['B1', 'P2', ''], 'PGW': ['', 'R1Q', 'Q1L'], 'Dv': [12, None, 32], 'IDC': [618022.0, None, 567362.0], 'IndexC': [1.47, 1.57083, 0.75], 'TypeCM': ['S', '', 'R'], 'FN': ['BF', 'AA', 'CA'], 'FG': ['CI', 'Y', 'AF'], 'IndexCC': [3.88874, 1.57083, 2.32606], 'IndexCP': [35.7365, 0.36313, 2.09806], 'IndexMP': [10.619, 7.604, None]}
+df = dfs[0]
+df_filtered = df[df['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('IndexCP')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2024-08-27 11:14:03 [INFO] Executing Step 1: CodeGenerator
+2024-08-27 11:14:08 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:14:08 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,668269,B1,,12,618022.0,1.47,S,BF,CI,3.88874,35.7365,10.619
+01-02-2019,484584,P2,R1Q,,,,AA,BY,Y,1.57083,0.36313,7.604
+01-03-2019,713024,,Q1L,32,567362.0,0.75,R,CA,AF,2.32606,2.09806,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCP by FG on Dv 72
+
+You generated this python code:
+data = {'Periode': ['01-01-2019', '01-02-2019', '01-03-2019'], 'IDE': [668269, 484584, 713024], 'PGGROUP': ['B1', 'P2', ''], 'PGW': ['', 'R1Q', 'Q1L'], 'Dv': [12, None, 32], 'IDC': [618022.0, None, 567362.0], 'IndexC': [1.47, 1.57083, 0.75], 'TypeCM': ['S', '', 'R'], 'FN': ['BF', 'AA', 'CA'], 'FG': ['CI', 'Y', 'AF'], 'IndexCC': [3.88874, 1.57083, 2.32606], 'IndexCP': [35.7365, 0.36313, 2.09806], 'IndexMP': [10.619, 7.604, None]}
+df = dfs[0]
+df_filtered = df[df['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('IndexCP')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-27 11:14:08 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    'Periode': ['01-01-2019', '01-02-2019', '01-03-2019'], 
+    'IDE': [668269, 484584, 713024], 
+    'PGGROUP': ['B1', 'P2', ''], 
+    'PGW': ['', 'R1Q', 'Q1L'], 
+    'Dv': [12, None, 32], 
+    'IDC': [618022.0, None, 567362.0], 
+    'IndexC': [1.47, 1.57083, 0.75], 
+    'TypeCM': ['S', '', 'R'], 
+    'FN': ['BF', 'AA', 'CA'], 
+    'FG': ['CI', 'Y', 'AF'], 
+    'IndexCC': [3.88874, 1.57083, 2.32606], 
+    'IndexCP': [35.7365, 0.36313, 2.09806], 
+    'IndexMP': [10.619, 7.604, None]
+}
+
+df = pd.DataFrame(data)
+df_filtered = df[df['Dv'] == 72].dropna(subset=['IndexCP'])
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('IndexCP')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+            ```
+            
+2024-08-27 11:14:08 [INFO] Executing Step 2: CodeCleaning
+2024-08-27 11:14:08 [INFO] 
+Code running:
+```
+data = {'Periode': ['01-01-2019', '01-02-2019', '01-03-2019'], 'IDE': [668269, 484584, 713024], 'PGGROUP': ['B1', 'P2', ''], 'PGW': ['', 'R1Q', 'Q1L'], 'Dv': [12, None, 32], 'IDC': [618022.0, None, 567362.0], 'IndexC': [1.47, 1.57083, 0.75], 'TypeCM': ['S', '', 'R'], 'FN': ['BF', 'AA', 'CA'], 'FG': ['CI', 'Y', 'AF'], 'IndexCC': [3.88874, 1.57083, 2.32606], 'IndexCP': [35.7365, 0.36313, 2.09806], 'IndexMP': [10.619, 7.604, None]}
+df = dfs[0]
+df_filtered = df[df['Dv'] == 72].dropna(subset=['IndexCP'])
+plt.figure(figsize=(12, 6))
+for key, grp in df_filtered.groupby('FG'):
+    plt.plot(grp['IndexCP'], label=key)
+plt.xlabel('IndexCP')
+plt.ylabel('IndexCP')
+plt.title('IndexCP by FG on Dv 72')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+        ```
+2024-08-27 11:14:08 [WARNING] No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-08-27 11:14:08 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-08-27 11:14:08 [ERROR] Pipeline failed on step 6: No result returned
+2024-08-27 11:14:20 [INFO] Question: create me plot of IndexCC by FG on Dv 72
+2024-08-27 11:14:20 [INFO] Running PandasAI with openai LLM...
+2024-08-27 11:14:20 [INFO] Prompt ID: b35b0f9d-d977-4331-a9b6-e1da6ff792bc
+2024-08-27 11:14:20 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-27 11:14:20 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-27 11:14:20 [INFO] Executing Step 1: CacheLookup
+2024-08-27 11:14:20 [INFO] Executing Step 2: PromptGeneration
+2024-08-27 11:14:20 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,390344,E2,Q11,,543350.0,0.73,Q,DU,CJ,2.19061,0.52446,9.577
+01-02-2019,725137,V1,I1C1,84,,,Y,BT,T,1.0693,0.42987,
+01-03-2019,722499,,,22,746000.0,1.72,Z,AC,BV,4.95568,1.88662,50.091
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ create me plot of IndexCC by FG on Dv 72
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-27 11:14:20 [INFO] Executing Step 3: CodeGenerator
+2024-08-27 11:14:23 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:14:23 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,390344,E2,Q11,,543350.0,0.73,Q,DU,CJ,2.19061,0.52446,9.577
+01-02-2019,725137,V1,I1C1,84,,,Y,BT,T,1.0693,0.42987,
+01-03-2019,722499,,,22,746000.0,1.72,Z,AC,BV,4.95568,1.88662,50.091
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ create me plot of IndexCC by FG on Dv 72
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-27 11:14:23 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming we need to filter the dataframe where Dv is 72
+filtered_df = dfs[0][dfs[0]['Dv'] == 72]
+
+# Plotting IndexCC by FG
+plt.figure(figsize=(12, 6))
+plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC by FG')
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+plt.savefig('IndexCC_by_FG_plot.png')  # Save the plot as a png file
+
+# Declare result var
+result = {"type": "plot", "value": "IndexCC_by_FG_plot.png"}
+            ```
+            
+2024-08-27 11:14:23 [INFO] Executing Step 4: CachePopulation
+2024-08-27 11:14:23 [INFO] Executing Step 5: CodeCleaning
+2024-08-27 11:14:23 [INFO] Saving charts to D:\Kerja\Generative AI\AgenAI\AgenAI\exports\charts\temp_chart.png
+2024-08-27 11:14:23 [INFO] 
+Code running:
+```
+filtered_df = dfs[0][dfs[0]['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC by FG')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png'}
+        ```
+2024-08-27 11:14:23 [INFO] Executing Step 6: CodeExecution
+2024-08-27 11:14:23 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2024-08-27 11:14:23 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-08-27 11:14:23 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-27 11:14:23 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-27 11:14:23 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,390344,E2,Q11,,543350.0,0.73,Q,DU,CJ,2.19061,0.52446,9.577
+01-02-2019,725137,V1,I1C1,84,,,Y,BT,T,1.0693,0.42987,
+01-03-2019,722499,,,22,746000.0,1.72,Z,AC,BV,4.95568,1.88662,50.091
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCC by FG on Dv 72
+
+You generated this python code:
+filtered_df = dfs[0][dfs[0]['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC by FG')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2024-08-27 11:14:23 [INFO] Executing Step 1: CodeGenerator
+2024-08-27 11:14:26 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:14:26 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,390344,E2,Q11,,543350.0,0.73,Q,DU,CJ,2.19061,0.52446,9.577
+01-02-2019,725137,V1,I1C1,84,,,Y,BT,T,1.0693,0.42987,
+01-03-2019,722499,,,22,746000.0,1.72,Z,AC,BV,4.95568,1.88662,50.091
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCC by FG on Dv 72
+
+You generated this python code:
+filtered_df = dfs[0][dfs[0]['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC by FG')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-27 11:14:26 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+filtered_df = dfs[0][dfs[0]['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC by FG')
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+# Instead of saving the plot to a file, we will return the plot object directly
+result = {'type': 'plot', 'value': plt}
+
+result
+            ```
+            
+2024-08-27 11:14:26 [INFO] Executing Step 2: CodeCleaning
+2024-08-27 11:14:26 [INFO] 
+Code running:
+```
+filtered_df = dfs[0][dfs[0]['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC by FG')
+plt.xticks(rotation=45)
+plt.tight_layout()
+result = {'type': 'plot', 'value': plt}
+result
+        ```
+2024-08-27 11:14:26 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'module'> must match with type plot
+
+2024-08-27 11:14:26 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2024-08-27 11:14:26 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-27 11:14:26 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-27 11:14:26 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,390344,E2,Q11,,543350.0,0.73,Q,DU,CJ,2.19061,0.52446,9.577
+01-02-2019,725137,V1,I1C1,84,,,Y,BT,T,1.0693,0.42987,
+01-03-2019,722499,,,22,746000.0,1.72,Z,AC,BV,4.95568,1.88662,50.091
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCC by FG on Dv 72
+
+You generated this python code:
+filtered_df = dfs[0][dfs[0]['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC by FG')
+plt.xticks(rotation=45)
+plt.tight_layout()
+result = {'type': 'plot', 'value': plt}
+result
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'module'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2024-08-27 11:14:26 [INFO] Executing Step 1: CodeGenerator
+2024-08-27 11:14:28 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:14:28 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,390344,E2,Q11,,543350.0,0.73,Q,DU,CJ,2.19061,0.52446,9.577
+01-02-2019,725137,V1,I1C1,84,,,Y,BT,T,1.0693,0.42987,
+01-03-2019,722499,,,22,746000.0,1.72,Z,AC,BV,4.95568,1.88662,50.091
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCC by FG on Dv 72
+
+You generated this python code:
+filtered_df = dfs[0][dfs[0]['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC by FG')
+plt.xticks(rotation=45)
+plt.tight_layout()
+result = {'type': 'plot', 'value': plt}
+result
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'module'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-27 11:14:28 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is the list of dataframes containing the data
+filtered_df = dfs[0][dfs[0]['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC by FG')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+            ```
+            
+2024-08-27 11:14:28 [INFO] Executing Step 2: CodeCleaning
+2024-08-27 11:14:28 [INFO] 
+Code running:
+```
+filtered_df = dfs[0][dfs[0]['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC by FG')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+        ```
+2024-08-27 11:14:28 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-08-27 11:14:28 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2024-08-27 11:14:28 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-27 11:14:28 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-27 11:14:28 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,390344,E2,Q11,,543350.0,0.73,Q,DU,CJ,2.19061,0.52446,9.577
+01-02-2019,725137,V1,I1C1,84,,,Y,BT,T,1.0693,0.42987,
+01-03-2019,722499,,,22,746000.0,1.72,Z,AC,BV,4.95568,1.88662,50.091
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCC by FG on Dv 72
+
+You generated this python code:
+filtered_df = dfs[0][dfs[0]['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC by FG')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2024-08-27 11:14:28 [INFO] Executing Step 1: CodeGenerator
+2024-08-27 11:14:31 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:14:31 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,390344,E2,Q11,,543350.0,0.73,Q,DU,CJ,2.19061,0.52446,9.577
+01-02-2019,725137,V1,I1C1,84,,,Y,BT,T,1.0693,0.42987,
+01-03-2019,722499,,,22,746000.0,1.72,Z,AC,BV,4.95568,1.88662,50.091
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCC by FG on Dv 72
+
+You generated this python code:
+filtered_df = dfs[0][dfs[0]['Dv'] == 72]
+plt.figure(figsize=(12, 6))
+plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC by FG')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-27 11:14:31 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+# Filter the dataframe based on the conditions provided by the user
+filtered_df = dfs[0][(dfs[0]['Dv'] == 72) & (dfs[0]['IndexCC'].notnull()) & (dfs[0]['FG'].notnull())]
+
+if not filtered_df.empty:
+    plt.figure(figsize=(12, 6))
+    plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+    plt.xlabel('FG')
+    plt.ylabel('IndexCC')
+    plt.title('IndexCC by FG')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+else:
+    print("No data found matching the specified conditions.")
+            ```
+            
+2024-08-27 11:14:31 [INFO] Executing Step 2: CodeCleaning
+2024-08-27 11:14:31 [INFO] 
+Code running:
+```
+filtered_df = dfs[0][(dfs[0]['Dv'] == 72) & dfs[0]['IndexCC'].notnull() & dfs[0]['FG'].notnull()]
+if not filtered_df.empty:
+    plt.figure(figsize=(12, 6))
+    plt.bar(filtered_df['FG'], filtered_df['IndexCC'], color='skyblue')
+    plt.xlabel('FG')
+    plt.ylabel('IndexCC')
+    plt.title('IndexCC by FG')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+else:
+    print('No data found matching the specified conditions.')
+        ```
+2024-08-27 11:14:31 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-08-27 11:14:31 [ERROR] Pipeline failed on step 6: No result returned
+2024-08-27 11:14:56 [INFO] Question: create me plot of IndexCC on FG at Dv 72
+2024-08-27 11:14:56 [INFO] Running PandasAI with openai LLM...
+2024-08-27 11:14:56 [INFO] Prompt ID: f72c6074-5a42-421e-9784-ea328223ce42
+2024-08-27 11:14:56 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-27 11:14:56 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-27 11:14:56 [INFO] Executing Step 1: CacheLookup
+2024-08-27 11:14:56 [INFO] Executing Step 2: PromptGeneration
+2024-08-27 11:14:56 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-02-2019,765812,G1,,2,585836.0,15.99,S,AN,BI,2.79279,0.51927,5.297
+01-01-2019,385240,,I1W,,600511.0,0.89,Q,B,CL,0.79082,0.39954,
+01-03-2019,563389,K1,F1O,71,,,R,DF,BQ,1.22341,1.07391,8.873
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ create me plot of IndexCC on FG at Dv 72
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-27 11:14:56 [INFO] Executing Step 3: CodeGenerator
+2024-08-27 11:15:01 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:15:01 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-02-2019,765812,G1,,2,585836.0,15.99,S,AN,BI,2.79279,0.51927,5.297
+01-01-2019,385240,,I1W,,600511.0,0.89,Q,B,CL,0.79082,0.39954,
+01-03-2019,563389,K1,F1O,71,,,R,DF,BQ,1.22341,1.07391,8.873
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ create me plot of IndexCC on FG at Dv 72
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-27 11:15:01 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Sample DataFrame for demonstration
+dfs = [pd.DataFrame({
+    'Periode': ['01-02-2019', '01-01-2019', '01-03-2019'],
+    'IDE': [765812, 385240, 563389],
+    'PGGROUP': ['G1', '', 'K1'],
+    'PGW': ['', 'I1W', 'F1O'],
+    'Dv': [2, None, 71],
+    'IDC': [585836.0, 600511.0, None],
+    'IndexC': [15.99, 0.89, None],
+    'TypeCM': ['S', 'Q', 'R'],
+    'FN': ['AN', 'B', 'DF'],
+    'FG': ['BI', 'CL', 'BQ'],
+    'IndexCC': [2.79279, 0.79082, 1.22341],
+    'IndexCP': [0.51927, 0.39954, 1.07391],
+    'IndexMP': [5.297, None, 8.873]
+})]
+
+# Extract the required data for plotting
+data = dfs[0][(dfs[0]['Dv'] == 72)][['IndexCC', 'FG']]
+data = data.dropna()
+
+# Create the plot
+plt.figure(figsize=(10, 6))
+plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC on FG at Dv 72')
+plt.tight_layout()
+
+# Save the plot as a PNG file
+plt.savefig('indexcc_fg_plot.png')
+
+# Declare result var
+result = {
+    "type": "plot",
+    "value": "indexcc_fg_plot.png"
+}
+            ```
+            
+2024-08-27 11:15:01 [INFO] Executing Step 4: CachePopulation
+2024-08-27 11:15:01 [INFO] Executing Step 5: CodeCleaning
+2024-08-27 11:15:01 [INFO] Saving charts to D:\Kerja\Generative AI\AgenAI\AgenAI\exports\charts\temp_chart.png
+2024-08-27 11:15:01 [INFO] 
+Code running:
+```
+data = dfs[0][dfs[0]['Dv'] == 72][['IndexCC', 'FG']]
+data = data.dropna()
+plt.figure(figsize=(10, 6))
+plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC on FG at Dv 72')
+plt.tight_layout()
+plt.savefig('D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png'}
+        ```
+2024-08-27 11:15:01 [INFO] Executing Step 6: CodeExecution
+2024-08-27 11:15:02 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2024-08-27 11:15:02 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-08-27 11:15:02 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-27 11:15:02 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-27 11:15:02 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-02-2019,765812,G1,,2,585836.0,15.99,S,AN,BI,2.79279,0.51927,5.297
+01-01-2019,385240,,I1W,,600511.0,0.89,Q,B,CL,0.79082,0.39954,
+01-03-2019,563389,K1,F1O,71,,,R,DF,BQ,1.22341,1.07391,8.873
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCC on FG at Dv 72
+
+You generated this python code:
+data = dfs[0][dfs[0]['Dv'] == 72][['IndexCC', 'FG']]
+data = data.dropna()
+plt.figure(figsize=(10, 6))
+plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC on FG at Dv 72')
+plt.tight_layout()
+plt.savefig('D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2024-08-27 11:15:02 [INFO] Executing Step 1: CodeGenerator
+2024-08-27 11:15:04 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:15:04 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-02-2019,765812,G1,,2,585836.0,15.99,S,AN,BI,2.79279,0.51927,5.297
+01-01-2019,385240,,I1W,,600511.0,0.89,Q,B,CL,0.79082,0.39954,
+01-03-2019,563389,K1,F1O,71,,,R,DF,BQ,1.22341,1.07391,8.873
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCC on FG at Dv 72
+
+You generated this python code:
+data = dfs[0][dfs[0]['Dv'] == 72][['IndexCC', 'FG']]
+data = data.dropna()
+plt.figure(figsize=(10, 6))
+plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC on FG at Dv 72')
+plt.tight_layout()
+plt.savefig('D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/Kerja/Generative AI/AgenAI/AgenAI/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-27 11:15:04 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+data = dfs[0][dfs[0]['Dv'] == 72][['IndexCC', 'FG']]
+data = data.dropna()
+
+plt.figure(figsize=(10, 6))
+plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC on FG at Dv 72')
+plt.tight_layout()
+
+# Instead of saving the plot to a file, return it directly
+result = {'type': 'plot', 'value': plt}
+
+result
+            ```
+            
+2024-08-27 11:15:04 [INFO] Executing Step 2: CodeCleaning
+2024-08-27 11:15:04 [INFO] 
+Code running:
+```
+data = dfs[0][dfs[0]['Dv'] == 72][['IndexCC', 'FG']]
+data = data.dropna()
+plt.figure(figsize=(10, 6))
+plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC on FG at Dv 72')
+plt.tight_layout()
+result = {'type': 'plot', 'value': plt}
+result
+        ```
+2024-08-27 11:15:04 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'module'> must match with type plot
+
+2024-08-27 11:15:04 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2024-08-27 11:15:04 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-27 11:15:04 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-27 11:15:04 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-02-2019,765812,G1,,2,585836.0,15.99,S,AN,BI,2.79279,0.51927,5.297
+01-01-2019,385240,,I1W,,600511.0,0.89,Q,B,CL,0.79082,0.39954,
+01-03-2019,563389,K1,F1O,71,,,R,DF,BQ,1.22341,1.07391,8.873
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCC on FG at Dv 72
+
+You generated this python code:
+data = dfs[0][dfs[0]['Dv'] == 72][['IndexCC', 'FG']]
+data = data.dropna()
+plt.figure(figsize=(10, 6))
+plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC on FG at Dv 72')
+plt.tight_layout()
+result = {'type': 'plot', 'value': plt}
+result
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'module'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2024-08-27 11:15:04 [INFO] Executing Step 1: CodeGenerator
+2024-08-27 11:15:06 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:15:06 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-02-2019,765812,G1,,2,585836.0,15.99,S,AN,BI,2.79279,0.51927,5.297
+01-01-2019,385240,,I1W,,600511.0,0.89,Q,B,CL,0.79082,0.39954,
+01-03-2019,563389,K1,F1O,71,,,R,DF,BQ,1.22341,1.07391,8.873
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCC on FG at Dv 72
+
+You generated this python code:
+data = dfs[0][dfs[0]['Dv'] == 72][['IndexCC', 'FG']]
+data = data.dropna()
+plt.figure(figsize=(10, 6))
+plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC on FG at Dv 72')
+plt.tight_layout()
+result = {'type': 'plot', 'value': plt}
+result
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'module'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-27 11:15:06 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+data = dfs[0][(dfs[0]['Dv'] == 72) & (dfs[0]['IndexCC'].notnull())][['IndexCC', 'FG']]
+plt.figure(figsize=(10, 6))
+plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC on FG at Dv 72')
+plt.tight_layout()
+plt.show()
+            ```
+            
+2024-08-27 11:15:06 [INFO] Executing Step 2: CodeCleaning
+2024-08-27 11:15:06 [INFO] 
+Code running:
+```
+data = dfs[0][(dfs[0]['Dv'] == 72) & dfs[0]['IndexCC'].notnull()][['IndexCC', 'FG']]
+plt.figure(figsize=(10, 6))
+plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC on FG at Dv 72')
+plt.tight_layout()
+plt.show()
+        ```
+2024-08-27 11:15:06 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-08-27 11:15:06 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2024-08-27 11:15:06 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-27 11:15:06 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-27 11:15:06 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-02-2019,765812,G1,,2,585836.0,15.99,S,AN,BI,2.79279,0.51927,5.297
+01-01-2019,385240,,I1W,,600511.0,0.89,Q,B,CL,0.79082,0.39954,
+01-03-2019,563389,K1,F1O,71,,,R,DF,BQ,1.22341,1.07391,8.873
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCC on FG at Dv 72
+
+You generated this python code:
+data = dfs[0][(dfs[0]['Dv'] == 72) & dfs[0]['IndexCC'].notnull()][['IndexCC', 'FG']]
+plt.figure(figsize=(10, 6))
+plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC on FG at Dv 72')
+plt.tight_layout()
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2024-08-27 11:15:06 [INFO] Executing Step 1: CodeGenerator
+2024-08-27 11:15:08 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:15:08 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-02-2019,765812,G1,,2,585836.0,15.99,S,AN,BI,2.79279,0.51927,5.297
+01-01-2019,385240,,I1W,,600511.0,0.89,Q,B,CL,0.79082,0.39954,
+01-03-2019,563389,K1,F1O,71,,,R,DF,BQ,1.22341,1.07391,8.873
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ create me plot of IndexCC on FG at Dv 72
+
+You generated this python code:
+data = dfs[0][(dfs[0]['Dv'] == 72) & dfs[0]['IndexCC'].notnull()][['IndexCC', 'FG']]
+plt.figure(figsize=(10, 6))
+plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+plt.xlabel('FG')
+plt.ylabel('IndexCC')
+plt.title('IndexCC on FG at Dv 72')
+plt.tight_layout()
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-27 11:15:08 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+data = dfs[0][(dfs[0]['Dv'] == 72) & dfs[0]['IndexCC'].notnull()][['IndexCC', 'FG']]
+if not data.empty:
+    plt.figure(figsize=(10, 6))
+    plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+    plt.xlabel('FG')
+    plt.ylabel('IndexCC')
+    plt.title('IndexCC on FG at Dv 72')
+    plt.tight_layout()
+    plt.show()
+else:
+    print("No data found for IndexCC on FG at Dv 72")
+            ```
+            
+2024-08-27 11:15:08 [INFO] Executing Step 2: CodeCleaning
+2024-08-27 11:15:08 [INFO] 
+Code running:
+```
+data = dfs[0][(dfs[0]['Dv'] == 72) & dfs[0]['IndexCC'].notnull()][['IndexCC', 'FG']]
+if not data.empty:
+    plt.figure(figsize=(10, 6))
+    plt.bar(data['FG'], data['IndexCC'], color='skyblue')
+    plt.xlabel('FG')
+    plt.ylabel('IndexCC')
+    plt.title('IndexCC on FG at Dv 72')
+    plt.tight_layout()
+    plt.show()
+else:
+    print('No data found for IndexCC on FG at Dv 72')
+        ```
+2024-08-27 11:15:08 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "C:\Python310\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-08-27 11:15:08 [ERROR] Pipeline failed on step 6: No result returned
+2024-08-27 11:15:18 [INFO] Question: get me data of IndexCC on FG at Dv 72
+2024-08-27 11:15:18 [INFO] Running PandasAI with openai LLM...
+2024-08-27 11:15:18 [INFO] Prompt ID: 5e3e529b-fbb7-444e-bb76-7b20f275446f
+2024-08-27 11:15:18 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-27 11:15:19 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-27 11:15:19 [INFO] Executing Step 1: CacheLookup
+2024-08-27 11:15:19 [INFO] Executing Step 2: PromptGeneration
+2024-08-27 11:15:19 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-02-2019,474552,Q1,K1R,33,,30.17,X,Z,AX,29.61771,0.08458,9.459
+01-01-2019,570334,E1,H1O,4B,531637.0,,V,DE,AQ,0.44908,8.98196,
+01-03-2019,756754,,,,625063.0,0.0,Y,DG,CZ,0.67881,6.33837,73.698
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ get me data of IndexCC on FG at Dv 72
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-27 11:15:19 [INFO] Executing Step 3: CodeGenerator
+2024-08-27 11:15:23 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:15:23 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-02-2019,474552,Q1,K1R,33,,30.17,X,Z,AX,29.61771,0.08458,9.459
+01-01-2019,570334,E1,H1O,4B,531637.0,,V,DE,AQ,0.44908,8.98196,
+01-03-2019,756754,,,,625063.0,0.0,Y,DG,CZ,0.67881,6.33837,73.698
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ get me data of IndexCC on FG at Dv 72
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-27 11:15:23 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+dfs = [pd.DataFrame({
+    'Periode': ['01-02-2019', '01-01-2019', '01-03-2019'],
+    'IDE': [474552, 570334, 756754],
+    'PGGROUP': ['Q1', 'E1', ''],
+    'PGW': ['K1R', 'H1O', ''],
+    'Dv': [33, '4B', ''],
+    'IDC': [None, 531637.0, 625063.0],
+    'IndexC': [30.17, None, 0.0],
+    'TypeCM': ['X', 'V', 'Y'],
+    'FN': ['Z', 'DE', 'DG'],
+    'FG': ['AX', 'AQ', 'CZ'],
+    'IndexCC': [29.61771, 0.44908, 0.67881],
+    'IndexCP': [0.08458, 8.98196, 6.33837],
+    'IndexMP': [9.459, None, 73.698]
+})]
+
+# Get data of IndexCC on FG at Dv 72
+result = {}
+for df in dfs:
+    filtered_data = df[(df['FG'] == 'AX') & (df['Dv'] == 72)][['FG', 'IndexCC']]
+    result = {"type": "dataframe", "value": filtered_data}
+
+result
+            ```
+            
+2024-08-27 11:15:23 [INFO] Executing Step 4: CachePopulation
+2024-08-27 11:15:23 [INFO] Executing Step 5: CodeCleaning
+2024-08-27 11:15:23 [INFO] 
+Code running:
+```
+result = {}
+for df in dfs:
+    filtered_data = df[(df['FG'] == 'AX') & (df['Dv'] == 72)][['FG', 'IndexCC']]
+    result = {'type': 'dataframe', 'value': filtered_data}
+result
+        ```
+2024-08-27 11:15:23 [INFO] Executing Step 6: CodeExecution
+2024-08-27 11:15:23 [INFO] Executing Step 7: ResultValidation
+2024-08-27 11:15:23 [INFO] Answer: {'type': 'dataframe', 'value': Empty DataFrame
+Columns: [FG, IndexCC]
+Index: []}
+2024-08-27 11:15:23 [INFO] Executing Step 8: ResultParsing
+2024-08-27 11:16:08 [INFO] Question: get me data of sum of IndeCC by FG on Dv 72
+2024-08-27 11:16:08 [INFO] Running PandasAI with openai LLM...
+2024-08-27 11:16:08 [INFO] Prompt ID: 5c4651e9-3218-403b-b399-2ca7a49a0ec8
+2024-08-27 11:16:08 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-27 11:16:08 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-27 11:16:08 [INFO] Executing Step 1: CacheLookup
+2024-08-27 11:16:08 [INFO] Executing Step 2: PromptGeneration
+2024-08-27 11:16:08 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-03-2019,624767,,Q1M,,,0.45,S,BR,AQ,13.09942,1.34498,0.879
+01-01-2019,570460,B1,,15,745250.0,126.84,V,DL,V,8.76677,0.17098,8.784
+01-02-2019,525677,P1,H1M-OFF,91,590510.0,,Q,DR,BN,13.44625,1.13704,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ get me data of sum of IndeCC by FG on Dv 72
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-27 11:16:08 [INFO] Executing Step 3: CodeGenerator
+2024-08-27 11:16:09 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:16:09 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-03-2019,624767,,Q1M,,,0.45,S,BR,AQ,13.09942,1.34498,0.879
+01-01-2019,570460,B1,,15,745250.0,126.84,V,DL,V,8.76677,0.17098,8.784
+01-02-2019,525677,P1,H1M-OFF,91,590510.0,,Q,DR,BN,13.44625,1.13704,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ get me data of sum of IndeCC by FG on Dv 72
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-27 11:16:09 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+df = dfs[0]
+
+# Filter data for Dv 72
+df_dv_72 = df[df['Dv'] == 72]
+
+# Group by FG and calculate sum of IndexCC
+result_df = df_dv_72.groupby('FG')['IndexCC'].sum().reset_index()
+
+# Declare result var
+result = {
+    "type": "dataframe",
+    "value": result_df
+}
+            ```
+            
+2024-08-27 11:16:09 [INFO] Executing Step 4: CachePopulation
+2024-08-27 11:16:09 [INFO] Executing Step 5: CodeCleaning
+2024-08-27 11:16:09 [INFO] 
+Code running:
+```
+df = dfs[0]
+df_dv_72 = df[df['Dv'] == 72]
+result_df = df_dv_72.groupby('FG')['IndexCC'].sum().reset_index()
+result = {'type': 'dataframe', 'value': result_df}
+        ```
+2024-08-27 11:16:09 [INFO] Executing Step 6: CodeExecution
+2024-08-27 11:16:09 [INFO] Executing Step 7: ResultValidation
+2024-08-27 11:16:09 [INFO] Answer: {'type': 'dataframe', 'value': Empty DataFrame
+Columns: [FG, IndexCC]
+Index: []}
+2024-08-27 11:16:09 [INFO] Executing Step 8: ResultParsing
+2024-08-27 11:16:28 [INFO] Question: get me data of sum of IndeCC by FG on Dv 72 on each periode
+2024-08-27 11:16:28 [INFO] Running PandasAI with openai LLM...
+2024-08-27 11:16:28 [INFO] Prompt ID: ab6ee014-5d9d-420a-99b5-b74369d74378
+2024-08-27 11:16:28 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-27 11:16:28 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-27 11:16:28 [INFO] Executing Step 1: CacheLookup
+2024-08-27 11:16:28 [INFO] Executing Step 2: PromptGeneration
+2024-08-27 11:16:28 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-03-2019,311174,,I1G,2,592536.0,0.76,X,BZ,BG,4.69209,1.24611,8.686
+01-01-2019,701713,U2,E2Q-OFF,,596210.0,,AA,AM,BW,2.60337,2.10586,2.891
+01-02-2019,662711,U1,,23,,1.72,V,DY,CY,10.93253,0.39066,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ get me data of sum of IndeCC by FG on Dv 72 on each periode
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-27 11:16:28 [INFO] Executing Step 3: CodeGenerator
+2024-08-27 11:16:33 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:16:33 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-03-2019,311174,,I1G,2,592536.0,0.76,X,BZ,BG,4.69209,1.24611,8.686
+01-01-2019,701713,U2,E2Q-OFF,,596210.0,,AA,AM,BW,2.60337,2.10586,2.891
+01-02-2019,662711,U1,,23,,1.72,V,DY,CY,10.93253,0.39066,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ get me data of sum of IndeCC by FG on Dv 72 on each periode
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-27 11:16:33 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Load the DataFrame
+data = {'Periode': ['01-03-2019', '01-01-2019', '01-02-2019'],
+        'IDE': [311174, 701713, 662711],
+        'PGGROUP': ['', 'U2', 'U1'],
+        'PGW': ['I1G', 'E2Q-OFF', ''],
+        'Dv': [2, '', 23],
+        'IDC': [592536.0, 596210.0, None],
+        'IndexC': [0.76, None, 1.72],
+        'TypeCM': ['X', 'AA', 'V'],
+        'FN': ['BZ', 'AM', 'DY'],
+        'FG': ['BG', 'BW', 'CY'],
+        'IndexCC': [4.69209, 2.60337, 10.93253],
+        'IndexCP': [1.24611, 2.10586, 0.39066],
+        'IndexMP': [8.686, 2.891, None]}
+
+dfs = [pd.DataFrame(data)]
+
+# Get data of sum of IndeCC by FG on Dv 72 on each period
+result_df = dfs[0].loc[(dfs[0]['Dv'] == 72)].groupby('Periode')['IndexCC'].sum().reset_index()
+
+# Prepare the result variable
+result = {"type": "dataframe", "value": result_df}
+            ```
+            
+2024-08-27 11:16:33 [INFO] Executing Step 4: CachePopulation
+2024-08-27 11:16:33 [INFO] Executing Step 5: CodeCleaning
+2024-08-27 11:16:33 [INFO] 
+Code running:
+```
+data = {'Periode': ['01-03-2019', '01-01-2019', '01-02-2019'], 'IDE': [311174, 701713, 662711], 'PGGROUP': ['', 'U2', 'U1'], 'PGW': ['I1G', 'E2Q-OFF', ''], 'Dv': [2, '', 23], 'IDC': [592536.0, 596210.0, None], 'IndexC': [0.76, None, 1.72], 'TypeCM': ['X', 'AA', 'V'], 'FN': ['BZ', 'AM', 'DY'], 'FG': ['BG', 'BW', 'CY'], 'IndexCC': [4.69209, 2.60337, 10.93253], 'IndexCP': [1.24611, 2.10586, 0.39066], 'IndexMP': [8.686, 2.891, None]}
+result_df = dfs[0].loc[dfs[0]['Dv'] == 72].groupby('Periode')['IndexCC'].sum().reset_index()
+result = {'type': 'dataframe', 'value': result_df}
+        ```
+2024-08-27 11:16:33 [INFO] Executing Step 6: CodeExecution
+2024-08-27 11:16:33 [INFO] Executing Step 7: ResultValidation
+2024-08-27 11:16:33 [INFO] Answer: {'type': 'dataframe', 'value': Empty DataFrame
+Columns: [Periode, IndexCC]
+Index: []}
+2024-08-27 11:16:33 [INFO] Executing Step 8: ResultParsing
+2024-08-27 11:16:54 [INFO] Question: get me data FG by sum of IndexCC on Dv 72 in each periode
+2024-08-27 11:16:54 [INFO] Running PandasAI with openai LLM...
+2024-08-27 11:16:54 [INFO] Prompt ID: f6b253dc-4536-4524-8b85-e88b0d2ca193
+2024-08-27 11:16:54 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-27 11:16:54 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-27 11:16:54 [INFO] Executing Step 1: CacheLookup
+2024-08-27 11:16:54 [INFO] Executing Step 2: PromptGeneration
+2024-08-27 11:16:54 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,654533,I1,P1O,,623133.0,1.72,T,AL,BI,0.83737,0.05113,
+01-03-2019,733274,A1,,62,613375.0,0.0,S,CH,DD,1.57078,3.63975,3.18
+01-02-2019,750766,,P1S,27,,,X,C,BF,5.46995,1.95192,20.932
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ get me data FG by sum of IndexCC on Dv 72 in each periode
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-27 11:16:54 [INFO] Executing Step 3: CodeGenerator
+2024-08-27 11:16:59 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:16:59 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-01-2019,654533,I1,P1O,,623133.0,1.72,T,AL,BI,0.83737,0.05113,
+01-03-2019,733274,A1,,62,613375.0,0.0,S,CH,DD,1.57078,3.63975,3.18
+01-02-2019,750766,,P1S,27,,,X,C,BF,5.46995,1.95192,20.932
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ get me data FG by sum of IndexCC on Dv 72 in each periode
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-27 11:16:59 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Update the dataframe
+data = {'Periode': ['01-01-2019', '01-03-2019', '01-02-2019'],
+        'IDE': [654533, 733274, 750766],
+        'PGGROUP': ['I1', 'A1', ''],
+        'PGW': ['P1O', '', 'P1S'],
+        'Dv': ['', 62, 27],
+        'IDC': [623133.0, 613375.0, None],
+        'IndexC': [1.72, 0.0, None],
+        'TypeCM': ['T', 'S', 'X'],
+        'FN': ['AL', 'CH', 'C'],
+        'FG': ['BI', 'DD', 'BF'],
+        'IndexCC': [0.83737, 1.57078, 5.46995],
+        'IndexCP': [0.05113, 3.63975, 1.95192],
+        'IndexMP': [None, 3.18, 20.932]}
+
+dfs = [pd.DataFrame(data)]
+
+# Get data FG by sum of IndexCC on Dv 72 in each periode
+result_df = dfs[0][dfs[0].Dv == 72].groupby('Periode')['FG', 'IndexCC'].sum()
+
+# Declare result var
+result = {"type": "dataframe", "value": result_df}
+            ```
+            
+2024-08-27 11:16:59 [INFO] Executing Step 4: CachePopulation
+2024-08-27 11:16:59 [INFO] Executing Step 5: CodeCleaning
+2024-08-27 11:16:59 [INFO] 
+Code running:
+```
+data = {'Periode': ['01-01-2019', '01-03-2019', '01-02-2019'], 'IDE': [654533, 733274, 750766], 'PGGROUP': ['I1', 'A1', ''], 'PGW': ['P1O', '', 'P1S'], 'Dv': ['', 62, 27], 'IDC': [623133.0, 613375.0, None], 'IndexC': [1.72, 0.0, None], 'TypeCM': ['T', 'S', 'X'], 'FN': ['AL', 'CH', 'C'], 'FG': ['BI', 'DD', 'BF'], 'IndexCC': [0.83737, 1.57078, 5.46995], 'IndexCP': [0.05113, 3.63975, 1.95192], 'IndexMP': [None, 3.18, 20.932]}
+result_df = dfs[0][dfs[0].Dv == 72].groupby('Periode')['FG', 'IndexCC'].sum()
+result = {'type': 'dataframe', 'value': result_df}
+        ```
+2024-08-27 11:16:59 [INFO] Executing Step 6: CodeExecution
+2024-08-27 11:16:59 [INFO] Executing Step 7: ResultValidation
+2024-08-27 11:16:59 [INFO] Answer: {'type': 'dataframe', 'value': Empty DataFrame
+Columns: [IndexCC]
+Index: []}
+2024-08-27 11:16:59 [INFO] Executing Step 8: ResultParsing
+2024-08-27 11:17:11 [INFO] Question: get me data FG by sum of IndexCC on Dv 72
+2024-08-27 11:17:11 [INFO] Running PandasAI with openai LLM...
+2024-08-27 11:17:11 [INFO] Prompt ID: a1139a2f-7963-470c-a007-84d8f0a4e927
+2024-08-27 11:17:11 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-27 11:17:11 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-27 11:17:11 [INFO] Executing Step 1: CacheLookup
+2024-08-27 11:17:11 [INFO] Executing Step 2: PromptGeneration
+2024-08-27 11:17:11 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-03-2019,774227,,O1F,23,606673.0,1.28,S,AS,BP,1.23056,12.54859,
+01-01-2019,711713,H1,K1S,84,,2.46,Q,CV,CV,7.67546,4.03827,9.098
+01-02-2019,636157,O1,,,639575.0,,R,DW,AU,0.43069,0.34162,36.996
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ get me data FG by sum of IndexCC on Dv 72
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-27 11:17:11 [INFO] Executing Step 3: CodeGenerator
+2024-08-27 11:17:13 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:17:13 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-03-2019,774227,,O1F,23,606673.0,1.28,S,AS,BP,1.23056,12.54859,
+01-01-2019,711713,H1,K1S,84,,2.46,Q,CV,CV,7.67546,4.03827,9.098
+01-02-2019,636157,O1,,,639575.0,,R,DW,AU,0.43069,0.34162,36.996
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ get me data FG by sum of IndexCC on Dv 72
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-27 11:17:13 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+dfs = []  # assuming this is where you have stored all the dataframes
+
+# Filter the data based on Dv 72 and group by FG to get the sum of IndexCC
+result_df = pd.concat([df[df['Dv'] == 72] for df in dfs]).groupby('FG')['IndexCC'].sum()
+
+# Declare result var
+result = {"type": "dataframe", "value": result_df}
+            ```
+            
+2024-08-27 11:17:13 [INFO] Executing Step 4: CachePopulation
+2024-08-27 11:17:13 [INFO] Executing Step 5: CodeCleaning
+2024-08-27 11:17:13 [INFO] 
+Code running:
+```
+result_df = pd.concat([df[df['Dv'] == 72] for df in dfs]).groupby('FG')['IndexCC'].sum()
+result = {'type': 'dataframe', 'value': result_df}
+        ```
+2024-08-27 11:17:13 [INFO] Executing Step 6: CodeExecution
+2024-08-27 11:17:13 [INFO] Executing Step 7: ResultValidation
+2024-08-27 11:17:13 [INFO] Answer: {'type': 'dataframe', 'value': Empty DataFrame
+Columns: [IndexCC]
+Index: []}
+2024-08-27 11:17:13 [INFO] Executing Step 8: ResultParsing
+2024-08-27 11:24:14 [INFO] Question: get me trend from sum of IndexCC on FG = H
+2024-08-27 11:24:14 [INFO] Running PandasAI with openai LLM...
+2024-08-27 11:24:14 [INFO] Prompt ID: 5baeb763-00ab-41b1-b0ce-bbdfbf7d5fd6
+2024-08-27 11:24:14 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-27 11:24:14 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-27 11:24:14 [INFO] Executing Step 1: CacheLookup
+2024-08-27 11:24:14 [INFO] Executing Step 2: PromptGeneration
+2024-08-27 11:24:14 [INFO] Using prompt: <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-03-2019,462559,I1,,62,,0.46,W,BK,AO,3.68982,1.25558,
+01-02-2019,795984,H1,I1A-OFF,15,597943.0,18.12,P,DZ,AJ,3.80906,1.68178,2.431
+01-01-2019,742020,,D1I,,583939.0,,V,X,AP,2.19608,2.5701,25.478
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ get me trend from sum of IndexCC on FG = H
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-27 11:24:14 [INFO] Executing Step 3: CodeGenerator
+2024-08-27 11:24:19 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-27 11:24:19 [INFO] Prompt used:
+            <dataframe>
+dfs[0]:116079x13
+Periode,IDE,PGGROUP,PGW,Dv,IDC,IndexC,TypeCM,FN,FG,IndexCC,IndexCP,IndexMP
+01-03-2019,462559,I1,,62,,0.46,W,BK,AO,3.68982,1.25558,
+01-02-2019,795984,H1,I1A-OFF,15,597943.0,18.12,P,DZ,AJ,3.80906,1.68178,2.431
+01-01-2019,742020,,D1I,,583939.0,,V,X,AP,2.19608,2.5701,25.478
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ get me trend from sum of IndexCC on FG = H
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-27 11:24:19 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Load data into DataFrame
+data = {'Periode': ['01-03-2019', '01-02-2019', '01-01-2019'],
+        'IDE': [462559, 795984, 742020],
+        'PGGROUP': ['I1', 'H1', ''],
+        'PGW': ['', 'I1A-OFF', 'D1I'],
+        'Dv': [62, 15, None],
+        'IDC': [None, 597943.0, 583939.0],
+        'IndexC': [0.46, 18.12, None],
+        'TypeCM': ['W', 'P', 'V'],
+        'FN': ['BK', 'DZ', 'X'],
+        'FG': ['AO', 'AJ', 'AP'],
+        'IndexCC': [3.68982, 3.80906, 2.19608],
+        'IndexCP': [1.25558, 1.68178, 2.5701],
+        'IndexMP': [None, 2.431, 25.478]}
+
+df = pd.DataFrame(data)
+
+# Filter data for FG = H and group by Periode
+h_data = df[df['FG'] == 'H']
+trend_data = h_data.groupby('Periode')['IndexCC'].sum()
+
+# Return the trend data
+result = {"type": "dataframe", "value": trend_data}
+            ```
+            
+2024-08-27 11:24:19 [INFO] Executing Step 4: CachePopulation
+2024-08-27 11:24:19 [INFO] Executing Step 5: CodeCleaning
+2024-08-27 11:24:19 [INFO] 
+Code running:
+```
+data = {'Periode': ['01-03-2019', '01-02-2019', '01-01-2019'], 'IDE': [462559, 795984, 742020], 'PGGROUP': ['I1', 'H1', ''], 'PGW': ['', 'I1A-OFF', 'D1I'], 'Dv': [62, 15, None], 'IDC': [None, 597943.0, 583939.0], 'IndexC': [0.46, 18.12, None], 'TypeCM': ['W', 'P', 'V'], 'FN': ['BK', 'DZ', 'X'], 'FG': ['AO', 'AJ', 'AP'], 'IndexCC': [3.68982, 3.80906, 2.19608], 'IndexCP': [1.25558, 1.68178, 2.5701], 'IndexMP': [None, 2.431, 25.478]}
+df = dfs[0]
+h_data = df[df['FG'] == 'H']
+trend_data = h_data.groupby('Periode')['IndexCC'].sum()
+result = {'type': 'dataframe', 'value': trend_data}
+        ```
+2024-08-27 11:24:19 [INFO] Executing Step 6: CodeExecution
+2024-08-27 11:24:19 [INFO] Executing Step 7: ResultValidation
+2024-08-27 11:24:19 [INFO] Answer: {'type': 'dataframe', 'value':               IndexCC
+Periode              
+01-01-2019  722.99221
+01-02-2019  560.68752
+01-03-2019  672.02374}
+2024-08-27 11:24:19 [INFO] Executing Step 8: ResultParsing
